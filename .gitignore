@@ -1,0 +1,17 @@
+# Obsidian
+.obsidian/workspace*
+.obsidian/cache
+.trash/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python (for scripts/)
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Node (if any tooling ends up here)
+node_modules/
