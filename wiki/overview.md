@@ -15,19 +15,26 @@ the schema. Started 2026-09-17.
 | Domain | Pages | State |
 |---|---|---|
 | Knowledge management & LLM agents (meta — how this KB works) | [[llm-wiki-pattern]], [[retrieval-augmented-generation]], [[memex]], [[obsidian]], [[qmd]], [[vannevar-bush]] | 1 source; seed |
+| Zeta card payments & fraud risk (work) | [[post-approval-risk-assessment]], [[two-way-notification]], [[orcus]], [[featurespace]], [[luminous]], [[atropos]], [[cardworks]] | 1 source; seed |
 
 ## Current theses
 
 1. Compiling knowledge once and maintaining it beats re-deriving it per query
    ([[llm-wiki-pattern]] vs. [[retrieval-augmented-generation]]). *Held on one source; the
    founding assumption of this KB — to be tested by use.*
+2. In Zeta's card stack, fraud control is a two-pass loop: [[featurespace]] scores pre- and
+   post-approval, [[orcus]] executes the returned queue-tag action, and confirmed outcomes are
+   fed back to the engine ([[post-approval-risk-assessment]]). *Held on one design contract.*
 
 ## Open questions
 
 - Does index-first retrieval still work at ~30+ sources, or is [[qmd]] needed sooner?
 - What domains will this KB actually accumulate? (Next ingests will tell.)
 - Primary sources to add: Bush's "As We May Think" for [[memex]].
+- Payments domain gaps: [[two-way-notification]] timeout/correlation behaviour; the linked
+  "Notification Workflow Contracts with Orcus/FRM" and "Solutioning" docs; what Tachyon and
+  "Ruby & AccountClassification" are; the [[cardworks]] tenant-id discrepancy.
 
 ## Stats
 
-- Sources: 1 · Entities: 3 · Concepts: 3 · Syntheses: 0 · Last ingest: 2026-09-17
+- Sources: 2 · Entities: 8 · Concepts: 5 · Syntheses: 0 · Last ingest: 2026-09-18

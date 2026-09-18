@@ -3,7 +3,8 @@
 
 Checks:
   - duplicate basenames (wikilinks resolve by basename)
-  - broken [[wikilinks]] (target basename doesn't exist in wiki/ or raw/)
+  - broken [[wikilinks]] (target basename doesn't exist in wiki/ or raw/; ![[x.png]] embeds
+    resolve against raw/assets/ by filename)
   - orphan wiki pages (no inbound links from any other wiki page)
   - wiki pages missing from wiki/index.md, and index links pointing nowhere
   - missing / malformed frontmatter (required keys)
@@ -35,7 +36,8 @@ def strip_code(text):
 def main():
     problems = []
     wiki, raw = basenames(WIKI, problems), basenames(RAW, problems)
-    known = set(wiki) | set(raw)
+    assets = {p.name for p in (RAW / "assets").rglob("*") if p.is_file() and p.suffix != ".md"}
+    known = set(wiki) | set(raw) | assets
     inbound = {k: 0 for k in wiki}
     for stem, path in wiki.items():
         text = path.read_text(encoding="utf-8")

@@ -12,3 +12,12 @@ Obsidian attachment folder → `raw/assets/`.
 Raw: `raw/2026-09-17-llm-wiki-pattern.md` (pasted, author unverified). Created [[llm-wiki-idea-file]] (source page), [[llm-wiki-pattern]] (concept),
 [[retrieval-augmented-generation]], [[memex]], [[obsidian]], [[qmd]], [[vannevar-bush]], [[overview]]. Updated [[index]].
 Flagged: authorship unverified; index-first retrieval claim untested; primary source gap for Memex ("As We May Think").
+
+## [2026-09-18] ingest | Two way notification Integration with FRM for CardWorks: Contract (Orcus)
+Obsidian Web Clipper capture of a Zeta Confluence page, found in `raw/assets/Notification center/`;
+moved verbatim to `raw/2026-09-18-two-way-notification-frm-cardworks.md` and the three Confluence
+diagrams downloaded to `raw/assets/two-way-notification-frm-cardworks/`. Created
+[[two-way-notification-frm-cardworks-contract]], [[two-way-notification]],
+[[post-approval-risk-assessment]], [[orcus]], [[featurespace]], [[luminous]], [[atropos]], [[cardworks]].
+Updated [[index]], [[overview]] (new domain: Zeta card payments & fraud risk). Flagged: tenant-id
+600309 vs 600335 discrepancy; no timeout/correlation semantics for 2WAYNOTI.
