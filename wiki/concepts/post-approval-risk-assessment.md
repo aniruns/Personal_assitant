@@ -5,7 +5,7 @@ tags: [zeta, payments, fraud-risk]
 created: 2026-09-18
 updated: 2026-09-18
 sources: ["[[2026-09-18-two-way-notification-frm-cardworks]]"]
-related: ["[[two-way-notification]]", "[[featurespace]]", "[[orcus]]", "[[atropos]]", "[[cardworks]]", "[[luminous]]"]
+related: ["[[two-way-notification]]", "[[featurespace]]", "[[orcus]]", "[[atropos]]", "[[cardworks]]", "[[luminos]]"]
 confidence: medium
 status: seed
 ---
@@ -24,7 +24,7 @@ work together for [[cardworks]] ([[two-way-notification-frm-cardworks-contract]]
 *Rules Set 1* (pre-approval, answered on CardRT) and *Rules Set 2* (post-approval, answered on
 CardNRT). Steps as drawn ([[two-way-notification-frm-cardworks-contract]]):
 
-1. Card network sends an auth request to the Tachyon switch, which passes it to the Orcus
+1. Card network sends an auth request to the [[tachyon]] switch, which passes it to the Orcus
    Interceptor.
 2. Orcus sends **CardRT Req.** to FS; FS replies with advice and, optionally, a **"FOLLOW UP"**
    tag meaning "validate this one post-approval".
@@ -37,7 +37,7 @@ CardNRT). Steps as drawn ([[two-way-notification-frm-cardworks-contract]]):
 5. **CardNRT Resp.** carries a **Queue Tag** (labelled "A" in the diagram). Orcus publishes
    the event with the FS response to the `orcus-transactions` topic; an Atropos subscription
    applies a tenant-level filter and calls a webhook that runs the queue-tag handler.
-6. Communication with the customer goes out through the Notification Centre / [[luminous]].
+6. Communication with the customer goes out through the Notification Centre, i.e. [[luminos]].
 
 ![[risk-evaluation-flow-cw.png]]
 
@@ -47,8 +47,8 @@ CardNRT). Steps as drawn ([[two-way-notification-frm-cardworks-contract]]):
 |---|---|
 | `ManualReview` | Manual review in the FS ARIC portal; incident marked Risk / No-Risk |
 | `AutomatedHardBlock` | `TEMP_BLOCK` at account level (remark `AutomatedHardBlock`); customer must contact the issuer to unblock / hotlist / replace |
-| `AutomatedSoftBlock` | `TEMP_BLOCK` (remark `AutomatedSoftBlock`) **and** a Luminous notification; block is removed if the customer confirms the txn as legitimate |
-| `2Way Notification` | Luminous notification only; block applied only if the customer says illegitimate — see [[two-way-notification]] |
+| `AutomatedSoftBlock` | `TEMP_BLOCK` (remark `AutomatedSoftBlock`) **and** a Luminos notification; block is removed if the customer confirms the txn as legitimate |
+| `2Way Notification` | Luminos notification only; block applied only if the customer says illegitimate — see [[two-way-notification]] |
 | *(no tag)* | No action |
 
 ![[queue-tag-processing-flow.png]]

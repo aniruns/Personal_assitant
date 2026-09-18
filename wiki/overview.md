@@ -15,7 +15,8 @@ the schema. Started 2026-09-17.
 | Domain | Pages | State |
 |---|---|---|
 | Knowledge management & LLM agents (meta — how this KB works) | [[llm-wiki-pattern]], [[retrieval-augmented-generation]], [[memex]], [[obsidian]], [[qmd]], [[vannevar-bush]] | 1 source; seed |
-| Zeta card payments & fraud risk (work) | [[post-approval-risk-assessment]], [[two-way-notification]], [[orcus]], [[featurespace]], [[luminous]], [[atropos]], [[cardworks]] | 1 source; seed |
+| Zeta card payments & fraud risk (work) | [[post-approval-risk-assessment]], [[two-way-notification]], [[orcus]], [[featurespace]], [[atropos]], [[cardworks]], [[tachyon]] | 1 source; seed |
+| Zeta notifications & customer consent (work) | [[luminos]], [[luminos-notification-system]], [[luminos-notification-center]], [[notification-product]], [[receiver-preference-order]], [[communication-preferences]], [[notification-message-types]], [[notification-channels-and-routes]], [[point-of-presence]], [[clm]], [[twilio]], [[pcmm]] | 2 sources; growing |
 
 ## Current theses
 
@@ -25,16 +26,27 @@ the schema. Started 2026-09-17.
 2. In Zeta's card stack, fraud control is a two-pass loop: [[featurespace]] scores pre- and
    post-approval, [[orcus]] executes the returned queue-tag action, and confirmed outcomes are
    fed back to the engine ([[post-approval-risk-assessment]]). *Held on one design contract.*
+3. Notification preferences at Zeta are two separate layers that must be combined at send
+   time: **consent** (what the customer allows, per address and message type — owned by
+   [[clm]] as [[communication-preferences]]) and **delivery preference** (which contact vector
+   to try first, at product / event / receiver level — owned by [[luminos]] as the
+   [[receiver-preference-order]]). *Each layer held on one source; the combination rule is
+   nowhere documented — the biggest open question in this domain.*
 
 ## Open questions
 
 - Does index-first retrieval still work at ~30+ sources, or is [[qmd]] needed sooner?
 - What domains will this KB actually accumulate? (Next ingests will tell.)
 - Primary sources to add: Bush's "As We May Think" for [[memex]].
-- Payments domain gaps: [[two-way-notification]] timeout/correlation behaviour; the linked
-  "Notification Workflow Contracts with Orcus/FRM" and "Solutioning" docs; what Tachyon and
-  "Ruby & AccountClassification" are; the [[cardworks]] tenant-id discrepancy.
+- Payments domain gaps: [[two-way-notification]] timeout/correlation behaviour and its
+  delivery channel; the linked "Notification Workflow Contracts with Orcus/FRM" and
+  "Solutioning" docs; what [[tachyon]] really is (three roles seen, no definition) and what
+  "Ruby & AccountClassification" is; the [[cardworks]] tenant-id discrepancy.
+- Notifications domain gaps: how [[luminos]] combines CLM consent with its own preference
+  order; the CLM → Luminos event contract; whether "event" (LNS) = "message definition /
+  template" (LNC); the still-unread SharePoint design doc "LN Including product and event
+  level preferences" (its clipping came back empty — needs a docx export or paste).
 
 ## Stats
 
-- Sources: 2 · Entities: 8 · Concepts: 5 · Syntheses: 0 · Last ingest: 2026-09-18
+- Sources: 4 · Entities: 14 · Concepts: 12 · Syntheses: 0 · Last ingest: 2026-09-18

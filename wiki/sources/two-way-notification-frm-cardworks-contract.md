@@ -5,7 +5,7 @@ tags: [zeta, payments, fraud-risk, orcus]
 created: 2026-09-18
 updated: 2026-09-18
 sources: ["[[2026-09-18-two-way-notification-frm-cardworks]]"]
-related: ["[[two-way-notification]]", "[[post-approval-risk-assessment]]", "[[orcus]]", "[[featurespace]]", "[[luminous]]", "[[atropos]]", "[[cardworks]]"]
+related: ["[[two-way-notification]]", "[[post-approval-risk-assessment]]", "[[orcus]]", "[[featurespace]]", "[[luminos]]", "[[atropos]]", "[[cardworks]]"]
 confidence: high
 status: seed
 author: unknown (Zeta ORCUS Confluence space; page author not captured by the clipper)
@@ -19,7 +19,7 @@ source_type: article
 An internal Zeta Confluence design contract (ORCUS space) describing how [[orcus]] integrates
 with the [[featurespace]] fraud-risk engine for the [[cardworks]] tenant, and in particular how
 the **2WAYNOTI** queue-tag action is fulfilled by asking the customer to approve or decline a
-suspicious transaction through [[luminous]]. It covers the [[post-approval-risk-assessment]]
+suspicious transaction through [[luminos]]. It covers the [[post-approval-risk-assessment]]
 flow (CardRT → CardNRT → queue tag), the payload Orcus sends to Luminous, and how the customer's
 response is processed back into account blocks and fraud feedback to Featurespace. Clipped with
 Obsidian Web Clipper on 2026-09-18; three architecture/sequence diagrams were saved alongside
@@ -91,7 +91,7 @@ prose; the other handlers exist only in the diagram. Treated as medium-confidenc
 ## Wiki changes
 
 - Created: [[two-way-notification]], [[post-approval-risk-assessment]], [[orcus]],
-  [[featurespace]], [[luminous]], [[atropos]], [[cardworks]]
+  [[featurespace]], [[luminos]], [[atropos]], [[cardworks]]
 - Updated: [[overview]] (new domain: Zeta card payments & fraud risk), [[index]]
 
 ## Raw

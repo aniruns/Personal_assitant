@@ -5,7 +5,7 @@ tags: [zeta, infrastructure, messaging]
 created: 2026-09-18
 updated: 2026-09-18
 sources: ["[[2026-09-18-two-way-notification-frm-cardworks]]"]
-related: ["[[orcus]]", "[[luminous]]", "[[post-approval-risk-assessment]]", "[[two-way-notification]]"]
+related: ["[[orcus]]", "[[luminos]]", "[[post-approval-risk-assessment]]", "[[two-way-notification]]"]
 confidence: medium
 status: seed
 ---
@@ -14,14 +14,14 @@ status: seed
 
 Zeta's pub/sub event system (topics + subscriptions) as seen in the [[orcus]]–[[featurespace]]
 integration. It decouples "payment effected" from the post-approval risk call, and
-[[luminous]]'s customer responses from Orcus's handling of them
+[[luminos]]'s customer responses from Orcus's handling of them
 ([[two-way-notification-frm-cardworks-contract]]).
 
 ## What we know
 
 - **Topics named in the source:** `orcus-transactions` (transaction events with the FS
   response, plus audit events) and `notificationWorkflowResponse` (customer answers from
-  Luminous).
+  Luminos).
 - **Subscriptions** carry tenant-level filters and invoke a webhook on the consumer. Named
   examples: Sub1 `_orcus_code_interceptor_featurespace_switch-authorization_600309_RESOURCE`,
   Sub2 `_orcus_code_interceptor_featurespace_queueTag-processor_600309_orcus-transactions`.
@@ -32,7 +32,7 @@ integration. It decouples "payment effected" from the post-approval risk call, a
 
 ## Relationships
 
-- Producers/consumers seen so far: [[orcus]], [[luminous]].
+- Producers/consumers seen so far: [[orcus]], [[luminos]].
 
 ## Contradictions & open questions
 
