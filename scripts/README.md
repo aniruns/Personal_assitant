@@ -1,9 +1,6 @@
 # Scripts
 
-Home for ingest helpers and wiki maintenance scripts, e.g.:
-
-- Image downloader for clipped articles (pairs with the Obsidian Web Clipper hotkey workflow).
-- Wiki health-check script/prompt: finds orphaned articles, broken `[[wikilinks]]`, and stale content.
-- Any one-off data-prep scripts used while compiling `raw/` sources into the wiki.
-
-`scripts/CHANGELOG.md` (created on first health check) logs what each maintenance pass changed.
+- `lint.py` — mechanical wiki checks (broken wikilinks, orphans, index drift, frontmatter,
+  unprocessed raw sources). Run `python3 scripts/lint.py`. The agent runs this as step 1 of
+  every `lint` operation (see `CLAUDE.md` §3.3); the semantic pass is done by the agent.
+- Recent operations: `grep "^## \[" wiki/log.md | tail -5`

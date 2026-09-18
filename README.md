@@ -1,6 +1,6 @@
 # Personal Assistant — LLM-Maintained Knowledge Base
 
-This repo is a personal knowledge base built and maintained mostly by an LLM agent (Claude, or any coding agent that reads `AGENTS.md`). Instead of manipulating code, the agent mostly manipulates knowledge — stored as markdown files and images — following the workflow below.
+This repo is a personal knowledge base built and maintained mostly by an LLM agent (Claude Code, or any coding agent that reads `CLAUDE.md` / `AGENTS.md`). Instead of manipulating code, the agent mostly manipulates knowledge — stored as markdown files and images — following the workflow below.
 
 ## How it works
 
@@ -8,22 +8,24 @@ This repo is a personal knowledge base built and maintained mostly by an LLM age
 2. **Compile (`wiki/`)** — An LLM agent incrementally "compiles" a wiki from everything in `raw/`: summaries of each source, concepts extracted and written up as their own articles, and backlinks connecting related notes. `wiki/index.md` is the top-level table of contents.
 3. **Browse (Obsidian)** — Open this repo as an Obsidian vault to read `raw/` and `wiki/` side by side, follow backlinks, and view rendered outputs.
 4. **Ask (`outputs/`)** — Once the wiki has enough material, ask the agent complex questions against it. Answers get rendered as markdown, [Marp](https://marp.app/) slide decks, or images/plots — saved into `outputs/` — and interesting answers get filed back into `wiki/` to grow the knowledge base further.
-5. **Maintain (`scripts/`)** — Periodic LLM-driven "health checks" over the wiki: find inconsistent or contradictory notes, fill in missing data (with web research), and suggest new articles or connections.
+5. **Maintain** — Periodic LLM-driven "health checks" (`lint`): `scripts/lint.py` for the mechanical layer (broken links, orphans, index drift), the agent for the semantic layer (contradictions, stale claims, gaps to research).
 
 ## Structure
 
 ```
-raw/            Unprocessed source material (articles, papers, datasets, images)
-wiki/           Compiled knowledge base — articles, summaries, backlinks
-  index.md      Top-level index / table of contents
-  concepts/     Individual concept/topic articles
-outputs/        Generated outputs from Q&A sessions
-  slides/       Marp-format slide decks
-  images/       Generated charts/plots
-  answers/      Markdown write-ups of research answers
-scripts/        Ingest helpers and wiki health-check / linting scripts
-templates/      Templates for new wiki articles
-AGENTS.md       Instructions for the LLM agent maintaining this repo
+CLAUDE.md       The schema — how the agent maintains this KB (AGENTS.md points here)
+raw/            Immutable sources: YYYY-MM-DD-slug.md; images in raw/assets/
+wiki/
+  index.md      Catalog of every page, by category (agent reads this first)
+  log.md        Append-only timeline of ingests / queries / lints
+  overview.md   Living map: domains, current theses, open questions
+  sources/      One summary page per raw source
+  entities/     People, tools, orgs, products, projects
+  concepts/     Ideas, techniques, patterns
+  syntheses/    Comparisons, analyses, filed answers
+outputs/        Rendered answers, Marp slides, charts (transient unless filed)
+templates/      Page skeletons per type
+scripts/        lint.py — mechanical health checks
 ```
 
 ## Getting started
