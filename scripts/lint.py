@@ -36,7 +36,8 @@ def strip_code(text):
 def main():
     problems = []
     wiki, raw = basenames(WIKI, problems), basenames(RAW, problems)
-    assets = {p.name for p in (RAW / "assets").rglob("*") if p.is_file() and p.suffix != ".md"}
+    # non-markdown files anywhere in raw/ (images, PDF sources) resolve by full filename, as in Obsidian
+    assets = {p.name for p in RAW.rglob("*") if p.is_file() and p.suffix != ".md"}
     known = set(wiki) | set(raw) | assets
     inbound = {k: 0 for k in wiki}
     for stem, path in wiki.items():
