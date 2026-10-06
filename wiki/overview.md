@@ -17,7 +17,7 @@ the schema. Started 2026-09-17.
 | Knowledge management & LLM agents (meta — how this KB works) | [[llm-wiki-pattern]], [[retrieval-augmented-generation]], [[memex]], [[obsidian]], [[qmd]], [[vannevar-bush]] | 1 source; seed |
 | Zeta card payments & fraud risk (work) | [[post-approval-risk-assessment]], [[two-way-notification]], [[orcus]], [[featurespace]], [[atropos]], [[cardworks]], [[tachyon]] | 1 source; seed |
 | Zeta notifications & customer consent (work) | [[luminos]], [[luminos-notification-system]], [[luminos-notification-center]], [[notification-product]], [[receiver-preference-order]], [[communication-preferences]], [[notification-message-types]], [[notification-channels-and-routes]], [[point-of-presence]], [[clm]], [[twilio]], [[pcmm]] | 2 sources; growing |
-| Using AI tools well — Claude (personal learning) | [[claude]], [[prompting-fundamentals]], [[ai-fluency]], [[lightweight-evals]], [[claude-projects]], [[claude-skills]], [[claude-connectors]], [[claude-artifacts]], [[claude-code]], [[claude-cowork]], [[claude-in-chrome]], [[model-context-protocol]], [[choosing-a-claude-surface]], [[agentic-loop]], [[explore-plan-code-commit]], [[context-management]], [[claude-md]], [[subagents]], [[claude-code-hooks]], [[claude-code-extension-points]], [[human-ai-interaction-modes]], [[hallucination]], [[ai-fluency-glossary]] | 3 sources (2 course notes + AI Fluency glossary); growing |
+| Using AI tools well — Claude (personal learning) | [[claude]], [[prompting-fundamentals]], [[ai-fluency]], [[lightweight-evals]], [[claude-projects]], [[claude-skills]], [[claude-connectors]], [[claude-artifacts]], [[claude-code]], [[claude-cowork]], [[claude-in-chrome]], [[model-context-protocol]], [[choosing-a-claude-surface]], [[agentic-loop]], [[explore-plan-code-commit]], [[context-management]], [[claude-md]], [[subagents]], [[claude-code-hooks]], [[claude-code-extension-points]], [[human-ai-interaction-modes]], [[hallucination]], [[ai-fluency-glossary]], [[claude-platform]], [[claude-managed-agents]], [[tool-use]], [[extended-thinking]], [[model-selection]], [[who-runs-the-agent-loop]] | 4 sources (3 course notes + AI Fluency glossary); growing |
 
 ## Current theses
 
@@ -44,6 +44,12 @@ the schema. Started 2026-09-17.
    "every time" rules in [[claude-code-hooks]] ([[claude-code-extension-points]]). *Held on one
    course; this KB is itself a live test, since its schema is advisory CLAUDE.md with no hooks
    yet.*
+6. Every Claude agent is the **same loop**; the real choice is **who runs it**. Your own code,
+   the SDK tool runner, [[claude-managed-agents]], or an Anthropic-built client like
+   [[claude-code]] ([[who-runs-the-agent-loop]]). "You own the loop and the tools. Claude owns
+   the reasoning" ([[agentic-loop]]). Cost discipline runs through it: the cheapest model you'd
+   ship ([[model-selection]]) and context as a per-call bill ([[context-management]]). *Held on
+   one course; row 5 of the synthesis is our own assessment.*
 
 ## Open questions
 
@@ -63,8 +69,11 @@ the schema. Started 2026-09-17.
   source ([[model-context-protocol]]); how [[claude-projects]]' RAG fallback affects
   cross-document synthesis; which surfaces the user actually adopts at work; the video-only
   Claude Code lessons (first prompt, skills) and the follow-up courses (Intro to subagents,
-  Intro to agent skills); whether this KB should add lint/secret-scan hooks.
+  Intro to agent skills); whether this KB should add lint/secret-scan hooks; prompt-caching
+  mechanics and the API "controls" layer (evals, dashboards) named but not covered by
+  [[claude-platform-101-course-notes]]; where the Claude Agent SDK sits in
+  [[who-runs-the-agent-loop]].
 
 ## Stats
 
-- Sources: 7 · Entities: 18 · Concepts: 27 · Syntheses: 3 · Last ingest: 2026-10-06
+- Sources: 8 · Entities: 20 · Concepts: 30 · Syntheses: 4 · Last ingest: 2026-10-06

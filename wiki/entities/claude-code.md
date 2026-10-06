@@ -4,7 +4,7 @@ type: entity
 tags: [ai-tools, claude, coding, agents]
 created: 2026-10-06
 updated: 2026-10-06
-sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]"]
+sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]", "[[2026-10-06-claude-platform-notes]]"]
 related: ["[[claude]]", "[[agentic-loop]]", "[[explore-plan-code-commit]]", "[[context-management]]", "[[claude-md]]", "[[subagents]]", "[[claude-code-hooks]]", "[[claude-code-extension-points]]"]
 confidence: medium
 status: growing
@@ -71,6 +71,11 @@ calls the same three modes "manually approve / accept edits / plan"
 - **Git & PRs:** `/commit-push-pr` commits, pushes and opens a PR in one step. A PR opened via
   `gh pr create` is linked to the session; resume it with `claude --from-pr <n>`
   ([[claude-code-101-course-notes]]).
+- **Writing API code:** a built-in **Claude API skill** (`/claude-api`) loads automatically when
+  Claude Code sees the Anthropic SDK; if missing, `/plugin marketplace add AnthropicsSkills`
+  (with the final **s**). A good prompt names **the file, the pattern** (e.g. the tool runner)
+  **and the end state**; Claude Code writes the code, runs it and fixes errors in place. "Stub
+  the file, delegate it, review the diff" ([[claude-platform-101-course-notes]]).
 - **Cheatsheet:** `claude` · Shift+Tab · `/compact` · `/clear` · `/context` · `/init` ·
   `/agents` · `/mcp` · `/hooks` · `/commit-push-pr` · `claude mcp add` ·
   `claude --from-pr <n>` ([[claude-code-101-course-notes]]).
@@ -80,6 +85,8 @@ calls the same three modes "manually approve / accept edits / plan"
 - The "build software" shape of work in [[choosing-a-claude-surface]]. [[claude-cowork]] is
   the non-code counterpart for handing off whole tasks.
 - Can use [[claude-in-chrome]] to test UIs it builds ([[explore-plan-code-commit]]).
+- Itself an Anthropic-run [[agentic-loop]] on your machine; compare building your own on the
+  [[claude-platform]] in [[who-runs-the-agent-loop]].
 - The agent behind this KB's [[llm-wiki-pattern]] workflow; `CLAUDE.md` is the KB's
   [[claude-md]].
 
@@ -95,3 +102,4 @@ calls the same three modes "manually approve / accept edits / plan"
 
 - [[claude-code-101-course-notes]]
 - [[claude-101-course-notes]]
+- [[claude-platform-101-course-notes]]

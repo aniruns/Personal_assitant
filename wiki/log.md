@@ -42,3 +42,7 @@ Flagged: no contradictions; resolves the "AI Fluency known only second-hand" gap
 
 ## [2026-10-06] schema | lint.py resolves non-markdown raw sources
 First PDF raw source. `scripts/lint.py` now resolves extension-bearing links to any non-`.md` file in `raw/` (previously only `raw/assets/`). PDF sources are cited with their extension, e.g. `[[2026-10-06-ai-fluency-vocabulary-cheat-sheet.pdf]]`, as Obsidian requires.
+
+## [2026-10-06] ingest | Claude Platform 101 — course notes
+User's `~/Downloads/Claude-platform-notes.md` saved verbatim to `raw/2026-10-06-claude-platform-notes.md` with a frontmatter block added. Created [[claude-platform-101-course-notes]], [[claude-platform]], [[claude-managed-agents]], [[tool-use]], [[extended-thinking]], [[model-selection]], and synthesis [[who-runs-the-agent-loop]]. Updated [[agentic-loop]] (→ growing), [[context-management]] (retitled; API patterns; → growing), [[claude-skills]] (→ growing), [[model-context-protocol]], [[claude]] (→ growing), [[claude-code]], [[lightweight-evals]], [[hallucination]], [[choosing-a-claude-surface]], [[claude-code-extension-points]], [[overview]] (thesis 6), [[index]].
+Flagged: sample-size tension (5–10 vs 20–30 examples), assessed as different purposes; model names / beta flags time-sensitive; prompt caching and the "controls" layer uncovered.

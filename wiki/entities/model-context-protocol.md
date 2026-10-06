@@ -4,8 +4,8 @@ type: entity
 tags: [ai-tools, llm-agents, integration, standard]
 created: 2026-10-06
 updated: 2026-10-06
-sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]"]
-related: ["[[claude-connectors]]", "[[claude]]", "[[qmd]]", "[[claude-code]]", "[[context-management]]", "[[claude-code-extension-points]]"]
+sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]", "[[2026-10-06-claude-platform-notes]]"]
+related: ["[[claude-connectors]]", "[[claude]]", "[[qmd]]", "[[claude-code]]", "[[context-management]]", "[[claude-code-extension-points]]", "[[tool-use]]"]
 confidence: medium
 status: growing
 ---
@@ -21,6 +21,22 @@ AI". It is the protocol underneath [[claude-connectors]].
   create, update) ([[claude-101-course-notes]]).
 - Open standard: any tool can expose an MCP server, and a "custom connector" is the route when
   no listed connector exists ([[claude-101-course-notes]]).
+
+- **Why it exists:** if you write your own Asana, Slack and Google integrations, *you* maintain
+  them every time their APIs change. With MCP the **service provider** publishes and maintains
+  the server (tools, schemas, auth); when their API changes, they update it and you change
+  nothing. "Tools = your stuff · Skills = your processes · MCP = everyone else's stuff"
+  ([[claude-platform-101-course-notes]]). Server directory: modelcontextprotocol.io.
+
+### On the API
+
+- Beta, needs a beta header. `mcp_servers` declares the connection (type, URL, name, optional
+  auth token); an `mcp_toolset` entry in `tools` says which of the server's tools Claude may use
+  (all by default). Claude **discovers the tools itself**, so you write no schemas
+  ([[claude-platform-101-course-notes]]).
+- **Scoping down**, e.g. read-only Slack: `default_config: {"enabled": False}`, then enable only
+  `search_messages` and `list_channels`. This also saves context
+  ([[claude-platform-101-course-notes]], [[context-management]]).
 
 ### In Claude Code
 
@@ -48,10 +64,13 @@ AI". It is the protocol underneath [[claude-connectors]].
 
 ## Contradictions & open questions
 
-- Still no primary source: everything here is from course notes. The spec would firm up
-  transports and the protocol model.
+- Still no primary source: everything here is from course notes (now three). The spec would
+  firm up transports and the protocol model.
+- Can Claude Code scope a server to a subset of tools the way the API's `mcp_toolset` can? That
+  would ease its idle context cost. Not covered.
 
 ## Sources
 
 - [[claude-101-course-notes]]
 - [[claude-code-101-course-notes]]
+- [[claude-platform-101-course-notes]]

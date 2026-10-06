@@ -4,8 +4,8 @@ type: synthesis
 tags: [ai-tools, claude, decision-guide]
 created: 2026-10-06
 updated: 2026-10-06
-sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]"]
-related: ["[[claude]]", "[[claude-cowork]]", "[[claude-code]]", "[[claude-in-chrome]]", "[[claude-projects]]", "[[claude-skills]]", "[[claude-connectors]]", "[[claude-artifacts]]", "[[claude-code-extension-points]]", "[[human-ai-interaction-modes]]"]
+sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]", "[[2026-10-06-claude-platform-notes]]"]
+related: ["[[claude]]", "[[claude-cowork]]", "[[claude-code]]", "[[claude-in-chrome]]", "[[claude-projects]]", "[[claude-skills]]", "[[claude-connectors]]", "[[claude-artifacts]]", "[[claude-code-extension-points]]", "[[human-ai-interaction-modes]]", "[[claude-platform]]", "[[who-runs-the-agent-loop]]"]
 confidence: medium
 status: seed
 ---
@@ -56,8 +56,10 @@ source (Drive/SharePoint) and a chat source (Slack/Teams); email is optional
 | UI prototypes | Claude Design |
 | Inside Excel / PowerPoint / Word / Outlook | Claude for M365 |
 | Web pages, browser automation | [[claude-in-chrome]] |
+| Inside your own product (code) | [[claude-platform]] (API); [[claude-managed-agents]] for long hosted runs |
 
-Source: [[claude-101-course-notes]].
+Source: [[claude-101-course-notes]]; last row [[claude-platform-101-course-notes]]. For the
+build-your-own options, see [[who-runs-the-agent-loop]].
 
 **Within Claude Code:** the terminal gets features first; the IDE extensions are about the
 same; the desktop Code tab suits background work; the web version (claude.ai/code) is for
@@ -68,7 +70,8 @@ remote work on GitHub repos only ([[claude-code-101-course-notes]]).
 **Projects = knowledge, skills = process, connectors = access** ([[claude-projects]],
 [[claude-skills]], [[claude-connectors]]). Every surface above draws on some mix of the three.
 Inside Claude Code the equivalents are CLAUDE.md, skills/subagents and MCP, plus hooks for
-enforcement. See [[claude-code-extension-points]].
+enforcement. See [[claude-code-extension-points]]. On the API the same trio reads "tools = your
+stuff, skills = your processes, MCP = everyone else's stuff" ([[claude-platform-101-course-notes]]).
 
 ## The user's tl;dr
 

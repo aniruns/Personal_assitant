@@ -12,6 +12,7 @@ updates it on every ingest or filing. See [[overview]] for the big picture and [
 - [[claude-101-course-notes|Claude 101 — course notes (Anthropic Academy)]] — the user's notes on 12 lessons: prompting, 4Ds, evals, projects/skills/connectors, artifacts, research, surfaces. _Ingested 2026-10-06_
 - [[claude-code-101-course-notes|Claude Code 101 — course notes]] — the user's notes on 11 lessons: agentic loop, permission modes, explore→plan→code→commit, context, CLAUDE.md, subagents, MCP, hooks. _Ingested 2026-10-06_
 - [[ai-fluency-vocabulary-cheat-sheet|AI Fluency: Key Terminology Cheat Sheet]] — Anthropic / Dakan & Feller glossary: 4Ds × 3 sub-competencies, 3 interaction modes, ~30 technical + prompting terms. _Ingested 2026-10-06_
+- [[claude-platform-101-course-notes|Claude Platform 101 — course notes]] — the user's notes on 13 lessons: API calls, model choice, agent loop, tools, thinking, skills, MCP, context, managed agents. _Ingested 2026-10-06_
 
 ## Concepts
 
@@ -36,9 +37,12 @@ updates it on every ingest or filing. See [[overview]] for the big picture and [
 - [[claude-skills]] — reusable process packages Claude loads itself; "projects = what, skills = how". _Updated 2026-10-06_
 - [[claude-connectors]] — MCP-based read/act access to your tools; sees only what you can see. _Updated 2026-10-06_
 - [[claude-artifacts]] — standalone outputs (Design / Slides / Docs + dashboards etc.); editing, sharing, exports. _Updated 2026-10-06_
-- [[agentic-loop]] — agent = LLM in a loop with tools: gather context → act → verify → repeat; human can steer anytime. _Updated 2026-10-06_
+- [[agentic-loop]] — agent = LLM in a loop with tools; in code: loop while `stop_reason == "tool_use"`; you own loop + tools, Claude owns reasoning. _Updated 2026-10-06_
+- [[tool-use]] — Claude chooses, your code runs; name/description/schema; tool runner; server vs client vs MCP tools. _Updated 2026-10-06_
+- [[extended-thinking]] — reason before answering; adaptive thinking + `output_config.effort`; only for hard problems. _Updated 2026-10-06_
+- [[model-selection]] — cheapest model you'd ship: 20–30-example eval, Haiku first, route per task; Fable/Opus/Sonnet/Haiku. _Updated 2026-10-06_
 - [[explore-plan-code-commit]] — Claude Code's core workflow: Plan mode first (cheapest course-correction), success criteria + tests, subagent review, commit. _Updated 2026-10-06_
-- [[context-management]] — context = finite working memory; auto-compaction, `/compact` vs `/clear` vs `/context`; specific prompts are cheaper. _Updated 2026-10-06_
+- [[context-management]] — context = finite working memory and a per-call bill; Claude Code commands + API patterns (just-in-time, compaction, caching, memory tool). _Updated 2026-10-06_
 - [[claude-md]] — CLAUDE.md project memory: read every session, project vs user level, start without one then `/init`; advisory, not enforced. _Updated 2026-10-06_
 - [[subagents]] — isolated-context delegates that return only a summary; YAML-frontmatter md files; read-only reviewers. _Updated 2026-10-06_
 - [[claude-code-hooks]] — deterministic lifecycle commands (PreToolUse/PostToolUse/…); exit 2 blocks and feeds stderr back. _Updated 2026-10-06_
@@ -62,10 +66,13 @@ updates it on every ingest or filing. See [[overview]] for the big picture and [
 - [[claude-code]] — agentic coding tool: permission modes, install + surfaces (terminal first, web = GitHub only), commands, PR flow; runs this KB. _Updated 2026-10-06_
 - [[claude-cowork]] — desktop tab for handing off multi-step work: plans, saves files back, scheduled tasks, plugins. _Updated 2026-10-06_
 - [[claude-in-chrome]] — browser sidebar that sees and acts on pages; not on Free; asks before purchases. _Updated 2026-10-06_
-- [[model-context-protocol]] — MCP, the open "USB-C for AI" standard; in Claude Code: HTTP/stdio, local/user/project scopes, idle context cost, tool search. _Updated 2026-10-06_
+- [[model-context-protocol]] — MCP, the open "USB-C for AI" standard; provider-maintained; API `mcp_toolset` scoping; Claude Code scopes, idle context cost, tool search. _Updated 2026-10-06_
+- [[claude-platform]] — Claude from code: API, SDKs, Console; primitives / infrastructure / controls; response = list of blocks. _Updated 2026-10-06_
+- [[claude-managed-agents]] — Anthropic-hosted agent loop: Agent → Environment → Session → Events; rubrics + graders; open the stream first. _Updated 2026-10-06_
 
 ## Syntheses
 
 - [[choosing-a-claude-surface]] — which Claude tool for which job: by shape of work, kind of question, and where you're working. _Updated 2026-10-06_
 - [[claude-code-extension-points]] — prompt vs CLAUDE.md vs skill vs subagent vs MCP vs hook, ranked by reliability and idle context cost. _Updated 2026-10-06_
+- [[who-runs-the-agent-loop]] — manual loop vs tool runner vs server tools vs managed agents vs Claude Code/Cowork: who owns loop, tools, sandbox. _Updated 2026-10-06_
 - [[ai-fluency-glossary]] — **study sheet**: every AI Fluency term, confused pairs, and a folded-answer self-test. _Updated 2026-10-06_

@@ -4,7 +4,7 @@ type: synthesis
 tags: [ai-tools, claude, coding, decision-guide]
 created: 2026-10-06
 updated: 2026-10-06
-sources: ["[[2026-10-06-claude-code-101-notes]]", "[[2026-10-06-claude-101-notes]]"]
+sources: ["[[2026-10-06-claude-code-101-notes]]", "[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-platform-notes]]"]
 related: ["[[claude-code]]", "[[claude-md]]", "[[claude-skills]]", "[[subagents]]", "[[model-context-protocol]]", "[[claude-code-hooks]]", "[[context-management]]", "[[choosing-a-claude-surface]]"]
 confidence: medium
 status: seed
@@ -56,6 +56,11 @@ Sources for the cells: [[claude-code-101-course-notes]]; skills' progressive loa
   process, connectors = access" ([[choosing-a-claude-surface]]). CLAUDE.md ≈ knowledge,
   skills/subagents ≈ process, MCP ≈ access, and hooks add a fourth category, **enforcement**,
   that claude.ai has no equivalent for.
+- **On the API** the rungs reappear as request parameters: `system` ≈ CLAUDE.md, `container.skills`
+  ≈ skills, `mcp_servers` + `mcp_toolset` ≈ MCP (with per-tool scoping to cut idle cost), and the
+  memory tool ≈ cross-session memory. Enforcement is your own loop code, or a permissions policy
+  in [[claude-managed-agents]] ([[claude-platform-101-course-notes]]). Assessment: the mapping is
+  ours; the course doesn't draw it.
 
 ## Contradictions & open questions
 
@@ -67,4 +72,4 @@ Sources for the cells: [[claude-code-101-course-notes]]; skills' progressive loa
 
 - [[claude-code-101-course-notes]], [[claude-101-course-notes]], [[claude-md]],
   [[claude-skills]], [[subagents]], [[model-context-protocol]], [[claude-code-hooks]],
-  [[context-management]]
+  [[context-management]], [[claude-platform-101-course-notes]]

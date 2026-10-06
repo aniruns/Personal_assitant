@@ -4,10 +4,10 @@ type: concept
 tags: [ai-tools, claude, automation]
 created: 2026-10-06
 updated: 2026-10-06
-sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]"]
-related: ["[[claude-projects]]", "[[claude-connectors]]", "[[claude-cowork]]", "[[claude]]", "[[subagents]]", "[[claude-code-extension-points]]"]
+sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]", "[[2026-10-06-claude-platform-notes]]"]
+related: ["[[claude-projects]]", "[[claude-connectors]]", "[[claude-cowork]]", "[[claude]]", "[[subagents]]", "[[claude-code-extension-points]]", "[[tool-use]]"]
 confidence: medium
-status: seed
+status: growing
 ---
 
 # Claude Skills
@@ -42,8 +42,18 @@ knowledge held in [[claude-projects]].
   [[subagents|subagent]]** is loaded in full ([[claude-code-101-course-notes]]). A
   `/commit-push-pr` skill is the course's example ([[explore-plan-code-commit]]).
 
+- **On the API** ([[claude-platform-101-course-notes]]): a skill is a folder centred on a
+  `SKILL.md` plus scripts and resources. **Upload once** (`client.beta.skills.create`), then
+  attach by ID through `container.skills` on a `client.beta.messages.create` call. It's a list,
+  so skills can be layered. They often pair with code execution so the skill's scripts can run.
+  Beta (needs a beta header). Progressive loading applies here too.
+
 ## How it connects
 
+- **Skills vs tools vs MCP:** a [[tool-use|tool]] is *what* Claude can do; a skill is *how* you
+  want it done. "Tools = your stuff · Skills = your processes · MCP = everyone else's stuff".
+  The payoff: every PM gets the same report structure without pasting templates into prompts
+  ([[claude-platform-101-course-notes]]).
 - **Skills vs projects:** a "call prep" skill can pull from customer profiles stored in a
   project ([[claude-101-course-notes]]).
 - Assessment: the knowledge/process split matches this KB's layers. `wiki/` is knowledge;
@@ -60,3 +70,4 @@ knowledge held in [[claude-projects]].
 
 - [[claude-101-course-notes]]
 - [[claude-code-101-course-notes]]
+- [[claude-platform-101-course-notes]]
