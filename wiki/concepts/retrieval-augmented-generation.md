@@ -4,8 +4,8 @@ type: concept
 tags: [llm, information-retrieval]
 created: 2026-09-17
 updated: 2026-10-06
-sources: ["[[2026-09-17-llm-wiki-pattern]]", "[[2026-10-06-claude-101-notes]]"]
-related: ["[[llm-wiki-pattern]]", "[[qmd]]", "[[claude-projects]]"]
+sources: ["[[2026-09-17-llm-wiki-pattern]]", "[[2026-10-06-claude-101-notes]]", "[[2026-10-06-ai-fluency-vocabulary-cheat-sheet.pdf]]"]
+related: ["[[llm-wiki-pattern]]", "[[qmd]]", "[[claude-projects]]", "[[hallucination]]"]
 confidence: medium
 status: seed
 ---
@@ -29,6 +29,12 @@ compiled pages via the index, and later via a search tool such as [[qmd]] (which
 hybrid BM25/vector search, i.e. RAG-style infrastructure). The real contrast is *compile once
 and maintain* vs. *re-derive per query*, not "search vs. no search".
 
+**Grounding view.** Anthropic's AI Fluency glossary defines RAG by its *purpose*: connecting
+models to external knowledge sources "to improve accuracy and reduce hallucinations"
+([[ai-fluency-vocabulary-cheat-sheet]], [[hallucination]]). Assessment: this complements
+rather than contradicts the critique above. RAG is good for *grounding* individual answers
+and weak at *accumulating* synthesis, which is the gap the wiki pattern fills.
+
 **In products.** [[claude-projects]] load the whole knowledge base into context while it fits,
 then **switch to RAG automatically** near the context limit, for roughly 10x capacity
 ([[claude-101-course-notes]]). Here RAG is a scaling fallback layered under a curated
@@ -50,3 +56,4 @@ Claude uses file names to find documents.
 
 - [[llm-wiki-idea-file|LLM Wiki (source page)]]
 - [[claude-101-course-notes]]
+- [[ai-fluency-vocabulary-cheat-sheet]]

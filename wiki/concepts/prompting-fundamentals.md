@@ -4,8 +4,8 @@ type: concept
 tags: [ai-tools, prompting]
 created: 2026-10-06
 updated: 2026-10-06
-sources: ["[[2026-10-06-claude-101-notes]]"]
-related: ["[[ai-fluency]]", "[[lightweight-evals]]", "[[claude]]", "[[claude-artifacts]]"]
+sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-ai-fluency-vocabulary-cheat-sheet.pdf]]"]
+related: ["[[ai-fluency]]", "[[lightweight-evals]]", "[[claude]]", "[[claude-artifacts]]", "[[ai-fluency-glossary]]", "[[hallucination]]"]
 confidence: medium
 status: seed
 ---
@@ -36,7 +36,7 @@ example covers all three parts.
 | Too generic | Add context: audience, constraints, history |
 | Wrong length | State it ("2 paras", "<100 words") |
 | Ignored format | **Show** an example; don't only describe it |
-| Confident but wrong | Verify what matters; ask for sources or confidence; turn on web search |
+| Confident but wrong ([[hallucination]]) | Verify what matters; ask for sources or confidence; turn on web search |
 | Wrong tone | Describe it in plain words and give a sample |
 
 **Iteration is "the main point"** ([[claude-101-course-notes]]):
@@ -45,6 +45,21 @@ example covers all three parts.
   better than "shorter".
 - Moves: follow up, give feedback, redirect, or edit and resend your message (pencil icon).
   If it has gone off the rails, start a new chat with fresh context.
+
+**Technique vocabulary** ([[ai-fluency-vocabulary-cheat-sheet]]; full definitions in
+[[ai-fluency-glossary]]). The course advice above maps onto named techniques:
+
+| Technique | Course equivalent |
+|---|---|
+| **Role / persona definition** | "set the stage" (who you are, and who Claude should be) |
+| **Output constraints / formatting** | "specify rules"; the wrong-length and ignored-format fixes |
+| **Few-shot (n-shot) prompting** | "**show** an example; don't only describe it" |
+| **Chain-of-thought / think-first** | asking for step-by-step reasoning; Claude's Thinking does this natively |
+
+In AI Fluency terms, task + rules = **Product Description** (what you want), tone =
+**Performance Description** (how it should behave), and step-by-step instructions =
+**Process Description** ([[ai-fluency]]). Assessment: the 3-part prompt doesn't mention
+Process Description; add it when the *method* matters.
 
 **Ask for the deliverable, not the content.** "Make a 1-page doc for leadership" works better
 than "summarise Q3". Say who it is for, and build the deliverable at the *end* of a
@@ -67,3 +82,4 @@ memory, [[claude-projects]] instructions and [[claude-skills]] ([[claude-101-cou
 ## Sources
 
 - [[claude-101-course-notes]]
+- [[ai-fluency-vocabulary-cheat-sheet]]

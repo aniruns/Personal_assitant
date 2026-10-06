@@ -4,8 +4,8 @@ type: concept
 tags: [knowledge-management, llm-agents, meta]
 created: 2026-09-17
 updated: 2026-10-06
-sources: ["[[2026-09-17-llm-wiki-pattern]]", "[[2026-10-06-claude-101-notes]]"]
-related: ["[[retrieval-augmented-generation]]", "[[memex]]", "[[obsidian]]", "[[qmd]]", "[[claude-code]]", "[[claude-skills]]"]
+sources: ["[[2026-09-17-llm-wiki-pattern]]", "[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]"]
+related: ["[[retrieval-augmented-generation]]", "[[memex]]", "[[obsidian]]", "[[qmd]]", "[[claude-code]]", "[[claude-skills]]", "[[claude-md]]", "[[claude-code-hooks]]"]
 confidence: high
 status: seed
 ---
@@ -58,6 +58,12 @@ the role of *knowledge* ([[claude-projects]]), the schema and templates play the
 raw uploads and falls back to [[retrieval-augmented-generation]] at scale, whereas this pattern
 compiles and maintains.
 
+Inside Claude Code, the schema is literally a [[claude-md]]: project memory that is read every
+session but is only *advisory*. Assessment: the parts of the workflow that must never be
+skipped, such as running `scripts/lint.py` and secret scanning, are better enforced as
+[[claude-code-hooks]], and the operations themselves could become skills to slim the schema
+([[claude-code-extension-points]], [[claude-code-101-course-notes]]).
+
 **Lineage.** A realization of [[vannevar-bush]]'s [[memex]]: private, curated, with associative
 trails between documents; the missing piece in 1945 was a maintainer.
 
@@ -85,3 +91,4 @@ Recorded here so the reasoning survives (the pattern says to document your workf
 
 - [[llm-wiki-idea-file|LLM Wiki (source page)]]
 - [[claude-101-course-notes]] (tooling parallel only)
+- [[claude-code-101-course-notes]] (CLAUDE.md / hooks parallel only)

@@ -4,7 +4,7 @@ type: entity
 tags: [ai-tools, claude, anthropic]
 created: 2026-10-06
 updated: 2026-10-06
-sources: ["[[2026-10-06-claude-101-notes]]"]
+sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]", "[[2026-10-06-ai-fluency-vocabulary-cheat-sheet.pdf]]"]
 related: ["[[claude-code]]", "[[claude-cowork]]", "[[claude-in-chrome]]", "[[claude-projects]]", "[[claude-skills]]", "[[claude-connectors]]", "[[claude-artifacts]]", "[[choosing-a-claude-surface]]"]
 confidence: medium
 status: seed
@@ -12,7 +12,8 @@ status: seed
 
 # Claude
 
-Anthropic's AI assistant and model family. In this KB it is both a subject (how to use it
+Anthropic's AI assistant, and the name of its family of large language models
+([[ai-fluency-vocabulary-cheat-sheet]]). In this KB it is both a subject (how to use it
 well) and the tool that maintains the KB itself: the wiki is compiled by [[claude-code]]
 following the [[llm-wiki-pattern]].
 
@@ -24,10 +25,15 @@ following the [[llm-wiki-pattern]].
   ([[claude-101-course-notes]]).
 - **Strengths claimed:** writing, research and analysis, coding (called out as a major
   strength), reasoning/maths, and learning. **Thinking** makes it reason step by step before
-  answering. **Learning mode** guides you to an answer instead of handing it over
+  answering, making it a "reasoning model" in [[ai-fluency-glossary]] terms. **Learning mode** guides you to an answer instead of handing it over
   ([[claude-101-course-notes]]).
 - **Context window:** 200K+ tokens (~500 pages), or 1M on paid plans with supported models,
-  as of the course date ([[claude-101-course-notes]]).
+  as of the course date ([[claude-101-course-notes]]). The window works as the model's
+  finite **working memory** ([[context-management]], [[claude-code-101-course-notes]]).
+- **Knowledge cutoff:** like any LLM, it has no built-in knowledge after its training cutoff,
+  so recent facts need web search ([[ai-fluency-vocabulary-cheat-sheet]]).
+- **As an agent:** in [[claude-code]] and [[claude-cowork]], Claude runs in an
+  [[agentic-loop]], an LLM in a loop with tools ([[claude-code-101-course-notes]]).
 - **Access:** web, desktop and mobile on all plans. Chats, projects and memory sync across
   devices. **Settings → "instructions for Claude"** applies to every chat. **Memory** keeps
   role, preferences and decisions, and can be edited in settings ([[claude-101-course-notes]]).
@@ -40,7 +46,7 @@ following the [[llm-wiki-pattern]].
 |---|---|---|
 | Chat (claude.ai, desktop, mobile) | [[choosing-a-claude-surface]] | turn-by-turn work |
 | Cowork | [[claude-cowork]] | hand off multi-step tasks; scheduled, plugins |
-| Claude Code | [[claude-code]] | agentic coding: terminal, IDE, desktop Code tab, Slack |
+| Claude Code | [[claude-code]] | agentic coding: terminal, IDE, desktop Code tab, web (GitHub), Slack |
 | Claude in Chrome | [[claude-in-chrome]] | browser sidebar that can see the page and act |
 | Claude Tag | — | Claude in Slack threads; can start a Claude Code session from a bug thread |
 | Claude for M365 | — | sidebars in Excel, PowerPoint, Word, Outlook (beta) |
@@ -52,7 +58,8 @@ following the [[llm-wiki-pattern]].
 
 ## Relationships
 
-- Prompted well via [[prompting-fundamentals]]; used responsibly via [[ai-fluency]].
+- Prompted well via [[prompting-fundamentals]]; used responsibly via [[ai-fluency]]; can
+  [[hallucination|hallucinate]]. Vocabulary in [[ai-fluency-glossary]].
 - Runs this KB through [[claude-code]] (see [[llm-wiki-pattern]]).
 
 ## Contradictions & open questions
@@ -62,3 +69,5 @@ following the [[llm-wiki-pattern]].
 ## Sources
 
 - [[claude-101-course-notes]]
+- [[claude-code-101-course-notes]]
+- [[ai-fluency-vocabulary-cheat-sheet]]

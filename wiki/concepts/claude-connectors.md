@@ -4,7 +4,7 @@ type: concept
 tags: [ai-tools, claude, integration]
 created: 2026-10-06
 updated: 2026-10-06
-sources: ["[[2026-10-06-claude-101-notes]]"]
+sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]"]
 related: ["[[model-context-protocol]]", "[[claude-skills]]", "[[claude-projects]]", "[[choosing-a-claude-surface]]", "[[claude]]"]
 confidence: medium
 status: seed
@@ -40,6 +40,10 @@ update). Connectors are built on [[model-context-protocol]].
   connectors = **access** ([[claude-101-course-notes]]).
 - Enterprise search and Research both build on connectors
   ([[choosing-a-claude-surface]]).
+- In [[claude-code]], the same protocol is configured directly as MCP servers (`claude mcp
+  add`, local / user / project scope). The course there stresses the **context cost** of tool
+  definitions, which the claude.ai connector lessons didn't mention
+  ([[model-context-protocol]], [[claude-code-101-course-notes]]).
 
 ## Contradictions & open questions
 
@@ -48,3 +52,4 @@ update). Connectors are built on [[model-context-protocol]].
 ## Sources
 
 - [[claude-101-course-notes]]
+- [[claude-code-101-course-notes]]

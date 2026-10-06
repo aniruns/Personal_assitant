@@ -4,8 +4,8 @@ type: synthesis
 tags: [ai-tools, claude, decision-guide]
 created: 2026-10-06
 updated: 2026-10-06
-sources: ["[[2026-10-06-claude-101-notes]]"]
-related: ["[[claude]]", "[[claude-cowork]]", "[[claude-code]]", "[[claude-in-chrome]]", "[[claude-projects]]", "[[claude-skills]]", "[[claude-connectors]]", "[[claude-artifacts]]"]
+sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]"]
+related: ["[[claude]]", "[[claude-cowork]]", "[[claude-code]]", "[[claude-in-chrome]]", "[[claude-projects]]", "[[claude-skills]]", "[[claude-connectors]]", "[[claude-artifacts]]", "[[claude-code-extension-points]]", "[[human-ai-interaction-modes]]"]
 confidence: medium
 status: seed
 ---
@@ -24,6 +24,11 @@ principle: **work out what kind of work it is first; then the right tab is obvio
 | Turn-by-turn | **Chat** | The answer changes what you ask next; you want to stay in the loop; it's quick. Desktop extras: double-tap Option for a floating quick-entry window, screenshots and window sharing, dictation |
 | Hand it off | **[[claude-cowork]]** | Multi-step; many tools; finished files saved to a folder; scheduled or background |
 | Build software | **[[claude-code]]** (Code tab) | Diffs, terminal, git; local or cloud |
+
+Assessment: the three shapes line up with the AI Fluency [[human-ai-interaction-modes]].
+Turn-by-turn is **augmentation**; hand-off and build-software lean towards **agency**. A
+precisely specified one-off request is **automation** on any surface. Picking the shape is
+the *Platform Awareness* part of [[ai-fluency]].
 
 ## 2. By kind of question
 
@@ -54,10 +59,16 @@ source (Drive/SharePoint) and a chat source (Slack/Teams); email is optional
 
 Source: [[claude-101-course-notes]].
 
+**Within Claude Code:** the terminal gets features first; the IDE extensions are about the
+same; the desktop Code tab suits background work; the web version (claude.ai/code) is for
+remote work on GitHub repos only ([[claude-code-101-course-notes]]).
+
 ## Building blocks underneath
 
 **Projects = knowledge, skills = process, connectors = access** ([[claude-projects]],
 [[claude-skills]], [[claude-connectors]]). Every surface above draws on some mix of the three.
+Inside Claude Code the equivalents are CLAUDE.md, skills/subagents and MCP, plus hooks for
+enforcement. See [[claude-code-extension-points]].
 
 ## The user's tl;dr
 

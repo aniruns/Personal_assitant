@@ -4,7 +4,7 @@ type: concept
 tags: [ai-tools, evaluation, prompting]
 created: 2026-10-06
 updated: 2026-10-06
-sources: ["[[2026-10-06-claude-101-notes]]"]
+sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-ai-fluency-vocabulary-cheat-sheet.pdf]]"]
 related: ["[[prompting-fundamentals]]", "[[ai-fluency]]"]
 confidence: medium
 status: seed
@@ -29,7 +29,10 @@ the numbers right but misses the bigger patterns" ([[claude-101-course-notes]]).
 ## How it connects
 
 - Tests the prompts built with [[prompting-fundamentals]].
-- Supports the Delegation and Discernment Ds of [[ai-fluency]].
+- In [[ai-fluency]] terms, this is **Product Discernment** made systematic (accuracy,
+  appropriateness, coherence, relevance), feeding **Task Delegation**: what to hand off and
+  where review stays mandatory ([[ai-fluency-vocabulary-cheat-sheet]]).
+- A cheap way to find where a task [[hallucination|hallucinates]].
 - Could be applied to this KB: re-ingest a source and compare the result with the existing
   pages. (Assessment; not tried.)
 
@@ -40,3 +43,4 @@ the numbers right but misses the bigger patterns" ([[claude-101-course-notes]]).
 ## Sources
 
 - [[claude-101-course-notes]]
+- [[ai-fluency-vocabulary-cheat-sheet]]

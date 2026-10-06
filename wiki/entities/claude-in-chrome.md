@@ -4,8 +4,8 @@ type: entity
 tags: [ai-tools, claude, browser-automation]
 created: 2026-10-06
 updated: 2026-10-06
-sources: ["[[2026-10-06-claude-101-notes]]"]
-related: ["[[claude]]", "[[claude-cowork]]", "[[choosing-a-claude-surface]]"]
+sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]"]
+related: ["[[claude]]", "[[claude-cowork]]", "[[claude-code]]", "[[choosing-a-claude-surface]]"]
 confidence: medium
 status: seed
 ---
@@ -24,6 +24,8 @@ A browser-sidebar version of [[claude]] that can see the current page and act on
 - **Safety posture:** meant for low-risk tasks on trusted sites. It asks before purchases or
   personal data. Financial and adult sites are blocked by default ([[claude-101-course-notes]]).
 - [[claude-cowork]] uses it for browser actions ([[claude-101-course-notes]]).
+- [[claude-code]] can use the extension to **test the UIs it builds**, giving the agent a way
+  to verify its own work ([[claude-code-101-course-notes]], [[explore-plan-code-commit]]).
 
 ## Relationships
 
@@ -36,3 +38,4 @@ A browser-sidebar version of [[claude]] that can see the current page and act on
 ## Sources
 
 - [[claude-101-course-notes]]
+- [[claude-code-101-course-notes]]

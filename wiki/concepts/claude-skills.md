@@ -4,8 +4,8 @@ type: concept
 tags: [ai-tools, claude, automation]
 created: 2026-10-06
 updated: 2026-10-06
-sources: ["[[2026-10-06-claude-101-notes]]"]
-related: ["[[claude-projects]]", "[[claude-connectors]]", "[[claude-cowork]]", "[[claude]]"]
+sources: ["[[2026-10-06-claude-101-notes]]", "[[2026-10-06-claude-code-101-notes]]"]
+related: ["[[claude-projects]]", "[[claude-connectors]]", "[[claude-cowork]]", "[[claude]]", "[[subagents]]", "[[claude-code-extension-points]]"]
 confidence: medium
 status: seed
 ---
@@ -36,6 +36,11 @@ knowledge held in [[claude-projects]].
   ([[claude-101-course-notes]]).
 - **Plugins** in [[claude-cowork]] bundle skills with [[claude-connectors]] and agents per role
   ([[claude-101-course-notes]]).
+- **Progressive loading (Claude Code):** only a skill's name and description sit in context.
+  The full content loads when Claude decides it needs it, so skills are lighter than MCP
+  servers, whose tool definitions are always loaded. The exception: a skill **preloaded into a
+  [[subagents|subagent]]** is loaded in full ([[claude-code-101-course-notes]]). A
+  `/commit-push-pr` skill is the course's example ([[explore-plan-code-commit]]).
 
 ## How it connects
 
@@ -44,6 +49,8 @@ knowledge held in [[claude-projects]].
 - Assessment: the knowledge/process split matches this KB's layers. `wiki/` is knowledge;
   `CLAUDE.md` and `templates/` are process ([[llm-wiki-pattern]]). The KB's operations (ingest,
   query, lint) could be packaged as skills.
+- In Claude Code, skills are one rung of [[claude-code-extension-points]]: cheaper than
+  [[claude-md]] or MCP, but less guaranteed than [[claude-code-hooks]].
 
 ## Contradictions & open questions
 
@@ -52,3 +59,4 @@ knowledge held in [[claude-projects]].
 ## Sources
 
 - [[claude-101-course-notes]]
+- [[claude-code-101-course-notes]]
