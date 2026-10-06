@@ -3,9 +3,9 @@ title: LLM Wiki pattern
 type: concept
 tags: [knowledge-management, llm-agents, meta]
 created: 2026-09-17
-updated: 2026-09-17
-sources: ["[[2026-09-17-llm-wiki-pattern]]"]
-related: ["[[retrieval-augmented-generation]]", "[[memex]]", "[[obsidian]]", "[[qmd]]"]
+updated: 2026-10-06
+sources: ["[[2026-09-17-llm-wiki-pattern]]", "[[2026-10-06-claude-101-notes]]"]
+related: ["[[retrieval-augmented-generation]]", "[[memex]]", "[[obsidian]]", "[[qmd]]", "[[claude-code]]", "[[claude-skills]]"]
 confidence: high
 status: seed
 ---
@@ -50,6 +50,14 @@ grep-able timeline. A local search tool like [[qmd]] is the upgrade path.
 LLM: everything else. Working setup: agent on one side, [[obsidian]] on the other —
 "Obsidian is the IDE; the LLM is the programmer; the wiki is the codebase."
 
+**Tooling here.** This KB is maintained by [[claude-code]], and `CLAUDE.md` is its standing
+project context. Claude's product model maps onto the three layers. Assessment: `wiki/` plays
+the role of *knowledge* ([[claude-projects]]), the schema and templates play the role of
+*process* ([[claude-skills]]), and connectors such as [[model-context-protocol]] servers like
+[[qmd]] supply *access* ([[claude-101-course-notes]]). The difference: a Claude Project stores
+raw uploads and falls back to [[retrieval-augmented-generation]] at scale, whereas this pattern
+compiles and maintains.
+
 **Lineage.** A realization of [[vannevar-bush]]'s [[memex]]: private, curated, with associative
 trails between documents; the missing piece in 1945 was a maintainer.
 
@@ -76,3 +84,4 @@ Recorded here so the reasoning survives (the pattern says to document your workf
 ## Sources
 
 - [[llm-wiki-idea-file|LLM Wiki (source page)]]
+- [[claude-101-course-notes]] (tooling parallel only)

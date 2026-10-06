@@ -17,6 +17,7 @@ the schema. Started 2026-09-17.
 | Knowledge management & LLM agents (meta — how this KB works) | [[llm-wiki-pattern]], [[retrieval-augmented-generation]], [[memex]], [[obsidian]], [[qmd]], [[vannevar-bush]] | 1 source; seed |
 | Zeta card payments & fraud risk (work) | [[post-approval-risk-assessment]], [[two-way-notification]], [[orcus]], [[featurespace]], [[atropos]], [[cardworks]], [[tachyon]] | 1 source; seed |
 | Zeta notifications & customer consent (work) | [[luminos]], [[luminos-notification-system]], [[luminos-notification-center]], [[notification-product]], [[receiver-preference-order]], [[communication-preferences]], [[notification-message-types]], [[notification-channels-and-routes]], [[point-of-presence]], [[clm]], [[twilio]], [[pcmm]] | 2 sources; growing |
+| Using AI tools well — Claude (personal learning) | [[claude]], [[prompting-fundamentals]], [[ai-fluency]], [[lightweight-evals]], [[claude-projects]], [[claude-skills]], [[claude-connectors]], [[claude-artifacts]], [[claude-code]], [[claude-cowork]], [[claude-in-chrome]], [[model-context-protocol]], [[choosing-a-claude-surface]] | 1 source (course notes); seed |
 
 ## Current theses
 
@@ -32,6 +33,11 @@ the schema. Started 2026-09-17.
    to try first, at product / event / receiver level — owned by [[luminos]] as the
    [[receiver-preference-order]]). *Each layer held on one source; the combination rule is
    nowhere documented — the biggest open question in this domain.*
+4. Getting value from an AI assistant is less about clever prompts than about **picking the
+   right surface for the shape of the work and iterating** — stage/task/rules, then specific
+   feedback, then verification ([[prompting-fundamentals]], [[ai-fluency]],
+   [[choosing-a-claude-surface]]). *Held on one vendor course; the user's own reflection is that
+   they still hand over whole tasks one question at a time.*
 
 ## Open questions
 
@@ -47,6 +53,10 @@ the schema. Started 2026-09-17.
   template" (LNC); the still-unread SharePoint design doc "LN Including product and event
   level preferences" (its clipping came back empty — needs a docx export or paste).
 
+- AI-tools domain gaps: the original AI Fluency material ([[ai-fluency]]); an MCP primary
+  source ([[model-context-protocol]]); how [[claude-projects]]' RAG fallback affects
+  cross-document synthesis; which surfaces the user actually adopts at work.
+
 ## Stats
 
-- Sources: 4 · Entities: 14 · Concepts: 12 · Syntheses: 0 · Last ingest: 2026-09-18
+- Sources: 5 · Entities: 18 · Concepts: 19 · Syntheses: 1 · Last ingest: 2026-10-06

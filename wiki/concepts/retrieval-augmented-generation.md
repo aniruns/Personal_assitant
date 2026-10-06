@@ -3,9 +3,9 @@ title: Retrieval-Augmented Generation (RAG)
 type: concept
 tags: [llm, information-retrieval]
 created: 2026-09-17
-updated: 2026-09-17
-sources: ["[[2026-09-17-llm-wiki-pattern]]"]
-related: ["[[llm-wiki-pattern]]", "[[qmd]]"]
+updated: 2026-10-06
+sources: ["[[2026-09-17-llm-wiki-pattern]]", "[[2026-10-06-claude-101-notes]]"]
+related: ["[[llm-wiki-pattern]]", "[[qmd]]", "[[claude-projects]]"]
 confidence: medium
 status: seed
 ---
@@ -29,16 +29,24 @@ compiled pages via the index, and later via a search tool such as [[qmd]] (which
 hybrid BM25/vector search, i.e. RAG-style infrastructure). The real contrast is *compile once
 and maintain* vs. *re-derive per query*, not "search vs. no search".
 
+**In products.** [[claude-projects]] load the whole knowledge base into context while it fits,
+then **switch to RAG automatically** near the context limit, for roughly 10x capacity
+([[claude-101-course-notes]]). Here RAG is a scaling fallback layered under a curated
+document set, not the primary design. The vendor also advises naming files well, because
+Claude uses file names to find documents.
+
 ## How it connects
 
 - [[llm-wiki-pattern]] — the alternative this KB is built on.
 - [[qmd]] — where RAG-style retrieval re-enters the wiki pattern once the index outgrows itself.
+- [[claude-projects]] — a shipping example of full-context first, RAG fallback at scale.
 
 ## Contradictions & open questions
 
-- Only one source so far, and it's an advocate for the alternative. A neutral or pro-RAG source
-  would balance this page.
+- Still no neutral or pro-RAG source; the second source ([[claude-101-course-notes]]) only
+  describes RAG as a product fallback, not its trade-offs. A balanced source is still needed.
 
 ## Sources
 
 - [[llm-wiki-idea-file|LLM Wiki (source page)]]
+- [[claude-101-course-notes]]

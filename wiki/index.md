@@ -9,11 +9,12 @@ updates it on every ingest or filing. See [[overview]] for the big picture and [
 - [[two-way-notification-frm-cardworks-contract|Two way notification Integration with FRM for CardWorks: Contract]] — Zeta Confluence contract: Orcus ↔ Featurespace post-approval flow and the 2WAYNOTI action via Luminos. _Ingested 2026-09-18_
 - [[luminos-notification-pcmm|Luminos Notification (LNS / LNC) — PCMM]] — capability matrix: two Beta modules, four capabilities each, 29 prioritised features incl. product/event/receiver preference order. _Ingested 2026-09-18_
 - [[communication-preferences-in-clm-aries|Communication Preferences in CLM (Aries)]] — eight message types, channel/provider table, per-address consent tags in CLM, update API, CLM→Luminos sync. _Ingested 2026-09-18_
+- [[claude-101-course-notes|Claude 101 — course notes (Anthropic Academy)]] — the user's notes on 12 lessons: prompting, 4Ds, evals, projects/skills/connectors, artifacts, research, surfaces. _Ingested 2026-10-06_
 
 ## Concepts
 
-- [[llm-wiki-pattern]] — LLM compiles and maintains a persistent wiki from immutable raw sources; the design behind this KB. _Updated 2026-09-17_
-- [[retrieval-augmented-generation]] — retrieve-then-generate over raw docs; the stateless foil to the wiki pattern. _Updated 2026-09-17_
+- [[llm-wiki-pattern]] — LLM compiles and maintains a persistent wiki from immutable raw sources; the design behind this KB. _Updated 2026-10-06_
+- [[retrieval-augmented-generation]] — retrieve-then-generate over raw docs; the stateless foil to the wiki pattern; Claude Projects use it as a scaling fallback. _Updated 2026-10-06_
 - [[memex]] — Bush's 1945 curated knowledge store with associative trails; ancestor of the wiki pattern. _Updated 2026-09-17_
 - [[post-approval-risk-assessment]] — CardRT (pre) + CardNRT (post) fraud scoring, FOLLOW UP tag, and the five queue-tag actions. _Updated 2026-09-18_
 - [[two-way-notification]] — 2WAYNOTI: ask the customer to approve/deny a txn via Luminos; block + FS feedback on the answer; delivery channel still open. _Updated 2026-09-18_
@@ -24,6 +25,13 @@ updates it on every ingest or filing. See [[overview]] for the big picture and [
 - [[notification-product]] — Luminos's top-level config unit: receivers, vectors, default preference, templates, languages, Tachyon mapping. _Updated 2026-09-18_
 - [[point-of-presence]] — CLM's labelled group of an account holder's addresses; where preference tags hang. _Updated 2026-09-18_
 - [[pcmm]] — Zeta's Module → Capability → Feature matrix format with maturity and P1–P3 priority. _Updated 2026-09-18_
+- [[prompting-fundamentals]] — stage → task → rules, the problem→fix table, iterate, ask for the deliverable. _Updated 2026-10-06_
+- [[ai-fluency]] — Dakan & Feller's 4Ds: Delegation, Description, Discernment, Diligence. _Updated 2026-10-06_
+- [[lightweight-evals]] — 5–10 past examples → prompt → compare → adjust; no tooling. _Updated 2026-10-06_
+- [[claude-projects]] — workspace = knowledge + instructions; automatic RAG near the context limit (~10x); name files well. _Updated 2026-10-06_
+- [[claude-skills]] — reusable process packages Claude loads itself; "projects = what, skills = how". _Updated 2026-10-06_
+- [[claude-connectors]] — MCP-based read/act access to your tools; sees only what you can see. _Updated 2026-10-06_
+- [[claude-artifacts]] — standalone outputs (Design / Slides / Docs + dashboards etc.); editing, sharing, exports. _Updated 2026-10-06_
 
 ## Entities
 
@@ -40,7 +48,12 @@ updates it on every ingest or filing. See [[overview]] for the big picture and [
 - [[twilio]] — P1 vendor for SMS, WhatsApp and two-way (Flow) channels; already used for SMS and IVR. _Updated 2026-09-18_
 - [[atropos]] — Zeta pub/sub: `orcus-transactions` and `notificationWorkflowResponse` topics, tenant-filtered subscriptions. _Updated 2026-09-18_
 - [[cardworks]] — tenant the FRM contract is scoped to; Inbox + printed-letter channels; tenant-id discrepancy (600309 vs 600335) flagged. _Updated 2026-09-18_
+- [[claude]] — Anthropic's assistant: Constitutional AI, steerable, 200K/1M context; hub for all surfaces and features. _Updated 2026-10-06_
+- [[claude-code]] — agentic coding (terminal, IDE, desktop Code tab, Slack); the agent that runs this KB. _Updated 2026-10-06_
+- [[claude-cowork]] — desktop tab for handing off multi-step work: plans, saves files back, scheduled tasks, plugins. _Updated 2026-10-06_
+- [[claude-in-chrome]] — browser sidebar that sees and acts on pages; not on Free; asks before purchases. _Updated 2026-10-06_
+- [[model-context-protocol]] — MCP, the open "USB-C for AI" standard under Claude's connectors. _Updated 2026-10-06_
 
 ## Syntheses
 
-_(none yet — filed answers, comparisons, and analyses go here)_
+- [[choosing-a-claude-surface]] — which Claude tool for which job: by shape of work, kind of question, and where you're working. _Updated 2026-10-06_
